@@ -11,7 +11,7 @@ function throwRandomError(chance) {
     let max_chance = 1
     let min_chance = 0.0
     if ((chance < min_chance) || (chance > max_chance)) {
-        throw new Error('Значение шанса должно быть в промежутке от 0.1 до 1');
+        throw new Error(`Значение шанса должно быть в промежутке от ${min_chance} до ${max_chance}`);
     }
     
     random_number = Math.random(max_chance).toFixed(1);
