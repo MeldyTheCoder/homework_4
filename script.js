@@ -8,8 +8,8 @@ document.getElementById("student").innerHTML = student;
 const error_chance = 0.2;
 
 function throwRandomError(chance) {
-    let max_chance = 1
-    let min_chance = 0.0
+    let max_chance = 1.0;
+    let min_chance = 0.0;
     if ((chance < min_chance) || (chance > max_chance)) {
         throw new Error(`Значение шанса должно быть в промежутке от ${min_chance} до ${max_chance}`);
     }
@@ -23,8 +23,8 @@ function throwRandomError(chance) {
 
 
 try {
-    throwRandomError(error_chance)
-    alert('Всё в порядке, приложение работает в штатном режиме')
+    throwRandomError(error_chance);
+    alert('Всё в порядке, приложение работает в штатном режиме');
 } catch (e) {
-    alert(`Произошла ошибка, пожалуйста перезагрузите страницу. Текст ошибки: ${e.message}`)
+    alert(`Произошла ошибка, пожалуйста перезагрузите страницу. Текст ошибки: ${e.message}`);
 }
